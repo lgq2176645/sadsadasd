@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props"></Import>
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <RootNamespace>Tensee.Banch</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='net461'">
+    <DefineConstants>FEATURE_LDAP;FEATURE_SIGNALR</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <DocumentationFile>..\Tensee.Banch.Web.Host\bin\Debug\netcoreapp2.0\xmls\Tensee.Banch.Application.Shared.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <OutputPath></OutputPath>
+    <DocumentationFile>..\Tensee.Banch.Web.Host\bin\Release\netcoreapp2.0\xmls\Tensee.Banch.Application.Shared.xml</DocumentationFile>
+  </PropertyGroup> 
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+  </ItemGroup> 
+
+  <ItemGroup>
+    <PackageReference Include="Abp.Web.Common" Version="3.7.1" />
+    <PackageReference Include="Senparc.Weixin.Work" Version="1.6.0" />
+  </ItemGroup> 
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tensee.Banch.Core.Shared\Tensee.Banch.Core.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

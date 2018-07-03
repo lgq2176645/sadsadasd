@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <RootNamespace>Tensee.Banch</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Flurl" Version="2.5.0" />
+    <PackageReference Include="Flurl.Http" Version="2.0.1" />
+    <PackageReference Include="modernhttpclient" Version="2.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tensee.Banch.Application.Shared\Tensee.Banch.Application.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

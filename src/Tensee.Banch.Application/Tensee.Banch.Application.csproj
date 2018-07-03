@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props"></Import>
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp2.0</TargetFrameworks>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <AssemblyName>Tensee.Banch.Application</AssemblyName>
+    <PackageId>Tensee.Banch.Application</PackageId>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace>Tensee.Banch</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Abp.HangFire.AspNetCore" Version="3.7.1" />
+    <PackageReference Include="Abp.ZeroCore" Version="3.7.1" />
+    <PackageReference Include="EPPlus.Core" Version="1.5.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Newtonsoft.Json.Schema" Version="3.0.10" />
+    <PackageReference Include="NPinyinCore" Version="0.2.0" />
+    <PackageReference Include="Senparc.Weixin.Work" Version="1.6.0" />
+    <PackageReference Include="Senparc.Weixin.WxOpen" Version="1.10.5" />
+    <PackageReference Include="System.Linq.Dynamic" Version="1.0.7" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
+    <Reference Include="System.Drawing" />
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Transactions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tensee.Banch.Application.Shared\Tensee.Banch.Application.Shared.csproj" />
+    <ProjectReference Include="..\Tensee.Banch.Core\Tensee.Banch.Core.csproj" />
+    <ProjectReference Include="..\Tensee.Banch.EntityFrameworkCore\Tensee.Banch.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Transactions" />
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='net461'">
+    <DefineConstants>FEATURE_LDAP;FEATURE_SIGNALR</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net461|AnyCPU'">
+    <DocumentationFile>..\Tensee.Banch.Web.Host\bin\Debug\netcoreapp2.0\xmls\Tensee.Banch.Application.xml</DocumentationFile>
+    <OutputPath>bin\Debug\net461\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net461|AnyCPU'">
+    <OutputPath></OutputPath>
+    <DocumentationFile>..\Tensee.Banch.Web.Host\bin\Release\netcoreapp2.0\xmls\Tensee.Banch.Application.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp2.0|AnyCPU'">
+    <DocumentationFile>..\Tensee.Banch.Web.Host\bin\Debug\netcoreapp2.0\xmls\Tensee.Banch.Application.xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>

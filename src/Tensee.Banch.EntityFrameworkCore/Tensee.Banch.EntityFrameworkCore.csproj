@@ -1,0 +1,85 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props"></Import>
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp2.0</TargetFrameworks>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <RootNamespace>Tensee.Banch</RootNamespace>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20180320093750_Create_table_Attribute.cs" />
+    <Compile Remove="Migrations\20180320094349_Edit_table_Attribute.cs" />
+    <Compile Remove="Migrations\20180320115436_Edit_table_goodcar.cs" />
+    <Compile Remove="Migrations\20180321094301_AddWxUser.cs" />
+    <Compile Remove="Migrations\20180322065434_Update-database.cs" />
+    <Compile Remove="Migrations\20180322081340_ChangeToWx_sku.cs" />
+    <Compile Remove="Migrations\20180322091158_Update-UserOtherMsg-AddColum.cs" />
+    <Compile Remove="Migrations\20180322092041_Update-UserOtherMsg-AddIsTry.cs" />
+    <Compile Remove="Migrations\20180326093801_Created_table_workflow.cs" />
+    <Compile Remove="Migrations\20180328030625_Add-ShopSchedulingByliweiquan.cs" />
+    <Compile Remove="Migrations\20180328034055_update-ShopSchedulingByliweiquan.cs" />
+    <Compile Remove="Migrations\20180418032303_Tensee_Init.cs" />
+    <Compile Remove="Migrations\20180418032858_Tensee_Init.cs" />
+    <Compile Remove="Migrations\20180418033805_Tensee_Init.cs" />
+    <Compile Remove="Migrations\20180418040057_Tensee_Init.cs" />
+    <Compile Remove="Migrations\20180418040645_updated_huangyu_20180418.cs" />
+    <Compile Remove="Migrations\20180418041120_updated_huangyu_20180418.cs" />
+    <Compile Remove="Migrations\20180423034633_CreateTravels_liguo_20180423.cs" />
+    <Compile Remove="Migrations\20180427055933_UpdateTravel_addUserId_liguo_20180427.cs" />
+    <Compile Remove="Migrations\20180427063401_UpdateTravel_addUserId_liguo_20180427.cs" />
+    <Compile Remove="Migrations\20180427072504_UpdateTravels_AddUserId_liguo_20180427.cs" />
+    <Compile Remove="Migrations\20180427093423_UpdateTravels_AddUserId_liguo_20180427.cs" />
+    <Compile Remove="Migrations\20180428084205_UpdateTravels_AddUserId_liguo.cs" />
+    <Compile Remove="Migrations\20180428092316_UpdateTravel_AddDesc_liguo_20180428.cs" />
+    <Compile Remove="Migrations\20180503130438_UpdateTravels_AddAgentApply_liguo_20180503.cs" />
+    <Compile Remove="Migrations\20180507084425_Create_WeChatExpand_To_SaleBrand.cs" />
+    <Compile Remove="Migrations\20180507094208_CreateTravels_liguo_20180507.cs" />
+    <Compile Remove="Migrations\20180511024649_AddSalaryCalculationMethod-LWQ.cs" />
+    <Compile Remove="Migrations\20180522102001_Add-Attendances-LWQ.cs" />
+    <Compile Remove="Migrations\20180522102918_update-Attendances-LWQ.cs" />
+    <Compile Remove="Migrations\20180529155020_Create_ChatNoAnnoy_liguo.cs" />
+    <Compile Remove="Migrations\20180531040806_Create_ChatNoAnnoy_liguo.cs" />
+    <Compile Remove="Migrations\20180531061244_CreateChatNoAnnoy_liguo.cs" />
+    <Compile Remove="Migrations\20180531062306_CreateChatNoAnnoy_liguo.cs" />
+    <Compile Remove="Migrations\20180531071028_AddChatNoAnnoy_liguo.cs" />
+    <Compile Remove="Migrations\20180601101327_AddChatNoAnnoy_liguo.cs" />
+    <Compile Remove="Migrations\20180605085250_Tensee_Init.cs" />
+    <Compile Remove="Migrations\20180611015633_Update_UserOtherMsg_liweiquan.cs" />
+    <Compile Remove="Migrations\20180611021122_AddChatNoAnnoy_liguo.cs" />
+    <Compile Remove="Migrations\20180611021741_Update_UserHistoryJob_liweiquan.cs" />
+    <Compile Remove="Migrations\20180612065519_AddHREvent.cs" />
+    <Compile Remove="Migrations\20180613040014_AddPunchInOutRecord_liguo.cs" />
+    <Compile Remove="Migrations\20180613081332_AddPunchInOutRecord_liguo.cs" />
+    <Compile Remove="Migrations\20180613103715_AddPunchInOutRecord_liguo.cs" />
+    <Compile Remove="Migrations\20180614062910_AddPunchInOutRecord_liguo.cs" />
+    <Compile Remove="Migrations\20180615070130_UpdateHRevent_liguo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tensee.Banch.Core\Tensee.Banch.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.1" />
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='net461'">
+    <DefineConstants>DEBUG;FEATURE_LDAP,DEBUG,CHATNOANNOY</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
+    <Reference Include="System.Transactions" />
+  </ItemGroup>
+
+</Project>
