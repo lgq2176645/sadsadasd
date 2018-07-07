@@ -151,7 +151,7 @@ namespace Tensee.Banch.Web.Startup
          
 
             var webApisPluginsFolder=Path.Combine(WebRootPath, "WebApisPlugins");
-
+            if (!Directory.Exists(webApisPluginsFolder)) Directory.CreateDirectory(webApisPluginsFolder);
            
             //Configure Abp and Dependency Injection
             return services.AddAbp<BanchWebHostModule>(options =>
