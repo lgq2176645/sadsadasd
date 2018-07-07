@@ -38,6 +38,8 @@ using Senparc.Weixin.Work.AdvancedAPIs.Asynchronous;
 using Senparc.Weixin.CommonAPIs;
 using Senparc.Weixin.Work.AdvancedAPIs.OaDataOpen;
 using Senparc.Weixin.MP.Entities;
+using Senparc.CO2NET.Extensions;
+using Senparc.CO2NET.Helpers.Serializers;
 
 namespace Tensee.Banch.QYWechat
 {
@@ -121,7 +123,7 @@ namespace Tensee.Banch.QYWechat
         /// <returns></returns>
         public async Task<GetMemberResult> GetMember(DeleteWeChatUserInput input)
         {
-            string token = _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
+            string token = await _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
             //如果因为没配置好企业微信ID等获取不到token 直接返回FALSE
             if (string.IsNullOrWhiteSpace(token))
             {
@@ -146,7 +148,7 @@ namespace Tensee.Banch.QYWechat
         public async Task<WorkJsonResult> DeleteMember(EntityDto<long> input)
         {
             //获取缓存里的token
-            string token = _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
+            string token = await _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
             //如果因为没配置好企业微信ID等获取不到token 直接返回FALSE
             if (string.IsNullOrWhiteSpace(token))
             {
@@ -166,7 +168,7 @@ namespace Tensee.Banch.QYWechat
         public async Task<WorkJsonResult> BatchDeleteMember(BatchDeleteWeChatUserInput input)
         {
             //获取缓存里的token
-            string token = _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
+            string token = await _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
             //如果因为没配置好企业微信ID等获取不到token 直接返回FALSE
             if (string.IsNullOrWhiteSpace(token))
             {
@@ -195,9 +197,8 @@ namespace Tensee.Banch.QYWechat
         /// <returns></returns>
         public async Task<GetDepartmentMemberResult> GetDepartmentMember(GetDepartmentWeChatUserInput input)
         {
-            int? maxJsonLength = null;//设置 JavaScriptSerializer 类接受的 JSON 字符串的最大长度
             //获取缓存里的token
-            string token = _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
+            string token = await _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
             //如果因为没配置好企业微信ID等获取不到token 直接返回FALSE
             if (string.IsNullOrWhiteSpace(token))
             {
@@ -207,7 +208,7 @@ namespace Tensee.Banch.QYWechat
             {
                 var url = string.Format(Config.ApiWorkHost + "/cgi-bin/user/simplelist?access_token={0}&department_id={1}&fetch_child={2}", accessToken.AsUrlData(), input.departmentId, input.fetchChild);
 
-                return await Get.GetJsonAsync<GetDepartmentMemberResult>(url, maxJsonLength: maxJsonLength);
+                return await Get.GetJsonAsync<GetDepartmentMemberResult>(url);
             }, token);
 
         }
@@ -227,9 +228,9 @@ namespace Tensee.Banch.QYWechat
         public async Task<GetDepartmentMemberInfoResult> GetDepartmentMemberInfo(GetDepartmentWeChatUserInput input)
         {
 
-            int? maxJsonLength = null;//设置 JavaScriptSerializer 类接受的 JSON 字符串的最大长度
+
             //获取缓存里的token
-            string token = _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
+            string token = await _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
             //如果因为没配置好企业微信ID等获取不到token 直接返回FALSE
             if (string.IsNullOrWhiteSpace(token))
             {
@@ -242,7 +243,7 @@ namespace Tensee.Banch.QYWechat
 
                 var url = string.Format(Config.ApiWorkHost + "/cgi-bin/user/list?access_token={0}&department_id={1}&fetch_child={2}", accessToken.AsUrlData(), input.departmentId, input.fetchChild);
 
-                return await Get.GetJsonAsync<GetDepartmentMemberInfoResult>(url, maxJsonLength: maxJsonLength);
+                return await Get.GetJsonAsync<GetDepartmentMemberInfoResult>(url);
             }, token);
         }
 
@@ -259,25 +260,25 @@ namespace Tensee.Banch.QYWechat
         public async  Task<CreateDepartmentResult> CreateDepartment(WeChatOrganization data)
         {
             //获取缓存里的token
-            string token = _cacheManager.GetCache("CacheName").Get(data.value, () => GetToken(data.value));
+            string token = await _cacheManager.GetCache("CacheName").Get(data.value, () => GetToken(data.value));
 
             //如果因为没配置好企业微信ID等获取不到token 直接返回FALSE
             if (string.IsNullOrWhiteSpace(token))
             {
                 return new CreateDepartmentResult { errcode=ReturnCode_Work.系统繁忙, errmsg="未获取到token"};
             }
-            return ApiHandlerWapper.TryCommonApi(accessToken =>
+            return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
                 var url = string.Format(Config.ApiWorkHost + "/cgi-bin/department/create?access_token={0}", accessToken.AsUrlData());
                 JsonSetting jsonSetting = new JsonSetting(true);
                 var redata = new
                 {
-                    name = data.name,
+                    data.name,
                     parentid = data.parentid == null ? 1 : data.parentid,
-                    order = data.order,
-                    id = data.id
+                    data.order,
+                    data.id
                 };
-                return Senparc.Weixin.CommonAPIs.CommonJsonSend.Send<CreateDepartmentResult>(accessToken, url, redata, CommonJsonSendType.POST, Config.TIME_OUT, jsonSetting: jsonSetting);
+                return await CommonJsonSend.SendAsync<CreateDepartmentResult>(accessToken, url, redata, CommonJsonSendType.POST, Config.TIME_OUT, jsonSetting: jsonSetting);
             }, token);
 
         }
@@ -290,7 +291,7 @@ namespace Tensee.Banch.QYWechat
         public async Task<WorkJsonResult> UpdateDepartment(WeChatOrganization data)
         {
             //获取缓存里的token
-            string token = _cacheManager.GetCache("CacheName").Get(data.value, () => GetToken(data.value));
+            string token = await _cacheManager.GetCache("CacheName").Get(data.value, () => GetToken(data.value));
             //如果因为没配置好企业微信ID等获取不到token 直接返回FALSE
             if (string.IsNullOrWhiteSpace(token))
             {
@@ -302,13 +303,13 @@ namespace Tensee.Banch.QYWechat
                 JsonSetting jsonSetting = new JsonSetting(true);
                 var redata = new
                 {
-                    name = data.name,
+                    data.name,
                     parentid = data.parentid == null ? 1 : data.parentid,
-                    order = data.order,
-                    id = data.id
+                    data.order,
+                    data.id
 
                 };
-                return Senparc.Weixin.CommonAPIs.CommonJsonSend.Send<WorkJsonResult>(null, url, redata, CommonJsonSendType.POST, Config.TIME_OUT, jsonSetting: jsonSetting);
+                return CommonJsonSend.Send<WorkJsonResult>(null, url, redata, CommonJsonSendType.POST, Config.TIME_OUT, jsonSetting: jsonSetting);
             }, token);
 
         }
@@ -321,18 +322,18 @@ namespace Tensee.Banch.QYWechat
         public async Task<WorkJsonResult> DeleteDepartment(DeleteWeChatOrganizationInput input)
         {
             //获取缓存里的token
-            string token = _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
+            string token = await _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
             //如果因为没配置好企业微信ID等获取不到token 直接返回FALSE
             if (string.IsNullOrWhiteSpace(token))
             {
                 return new WorkJsonResult { errcode = ReturnCode_Work.系统繁忙, errmsg = "未获取到token" };
 
             }
-            return ApiHandlerWapper.TryCommonApi(accessToken =>
+            return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
                 var url = string.Format(Config.ApiWorkHost + "/cgi-bin/department/delete?access_token={0}&id={1}", accessToken.AsUrlData(), input.Id.ToString());
 
-                return Get.GetJson<WorkJsonResult>(url);
+                return await Get.GetJsonAsync<WorkJsonResult>(url);
             }, token);
 
         }
@@ -346,13 +347,13 @@ namespace Tensee.Banch.QYWechat
         public async Task<GetDepartmentListResult> GetDepartmentList(GetWeChatOrganizationListInput input)
         {
             //获取缓存里的token
-            string token = _cacheManager.GetCache("CacheName").Get(input.value, () => GetToken(input.value));
+            string token = await _cacheManager.GetCache("CacheName").Get(input.value, () => GetToken(input.value));
             //如果因为没配置好企业微信ID等获取不到token 直接返回FALSE
             if (string.IsNullOrWhiteSpace(token))
             {
                 return new GetDepartmentListResult { errcode = ReturnCode_Work.系统繁忙, errmsg = "未获取到token" };
             }
-            return ApiHandlerWapper.TryCommonApi(accessToken =>
+            return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
                 var url = string.Format(Config.ApiWorkHost + "/cgi-bin/department/list?access_token={0}", accessToken.AsUrlData());
 
@@ -361,7 +362,7 @@ namespace Tensee.Banch.QYWechat
                     url += string.Format("&id={0}", input.id.Value);
                 }
 
-                return Get.GetJson<GetDepartmentListResult>(url);
+                return await Get.GetJsonAsync<GetDepartmentListResult>(url);
             }, token);
         }
 
@@ -380,18 +381,18 @@ namespace Tensee.Banch.QYWechat
         /// <returns></returns>
         public async Task<CreateTagResult> CreateTag(CreateTagInput input)
         {
-            string token = _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
+            string token = await _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
             //如果因为没配置好企业微信ID等获取不到token 直接返回FALSE
             if (string.IsNullOrWhiteSpace(token))
             {
                 return new CreateTagResult { errcode = ReturnCode_Work.系统繁忙, errmsg = "未获取到token" };
             }
-           return ApiHandlerWapper.TryCommonApi(accessToken =>
+           return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
                 var url = Config.ApiWorkHost + "/cgi-bin/tag/create?access_token={0}";
                 JsonSetting jsonSetting = new JsonSetting(true);
                 var datare = input;
-                return Senparc.Weixin.CommonAPIs.CommonJsonSend.Send<CreateTagResult>(accessToken, url, datare, CommonJsonSendType.POST, Config.TIME_OUT, jsonSetting: jsonSetting);
+                return await CommonJsonSend.SendAsync<CreateTagResult>(accessToken, url, datare, CommonJsonSendType.POST, Config.TIME_OUT, jsonSetting: jsonSetting);
             }, token);
           ;
         }
@@ -403,18 +404,18 @@ namespace Tensee.Banch.QYWechat
         /// <returns></returns>
         public async Task<WorkJsonResult> UpdateTag(CreateTagInput input)
         {
-            string token = _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
+            string token = await _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
             //如果因为没配置好企业微信ID等获取不到token 直接返回FALSE
             if (string.IsNullOrWhiteSpace(token))
             {
                 return new WorkJsonResult { errcode = ReturnCode_Work.系统繁忙, errmsg = "未获取到token" };
             }
-            return ApiHandlerWapper.TryCommonApi(accessToken =>
+            return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
                 var url = Config.ApiWorkHost + "/cgi-bin/tag/update?access_token={0}";
                 JsonSetting jsonSetting = new JsonSetting(true);
                 var datare = input;
-                return Senparc.Weixin.CommonAPIs.CommonJsonSend.Send<WorkJsonResult>(accessToken, url, datare, CommonJsonSendType.POST, Config.TIME_OUT, jsonSetting: jsonSetting);
+                return await CommonJsonSend.SendAsync<WorkJsonResult>(accessToken, url, datare, CommonJsonSendType.POST, Config.TIME_OUT, jsonSetting: jsonSetting);
             }, token);
             
         }
@@ -426,7 +427,7 @@ namespace Tensee.Banch.QYWechat
         /// <returns></returns>
         public async Task<WorkJsonResult> DeleteTag(EntityDto<string> input)
         {
-            string token = _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
+            string token = await _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
             //如果因为没配置好企业微信ID等获取不到token 直接返回FALSE
             if (string.IsNullOrWhiteSpace(token))
             {
@@ -434,11 +435,11 @@ namespace Tensee.Banch.QYWechat
 
             }
 
-            return ApiHandlerWapper.TryCommonApi(accessToken =>
+            return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
                 var url = string.Format(Config.ApiWorkHost + "/cgi-bin/tag/delete?access_token={0}&tagid={1}", accessToken.AsUrlData(), input.Id.ToString());
 
-                return Get.GetJson<WorkJsonResult>(url);
+                return await Get.GetJsonAsync<WorkJsonResult>(url);
             }, token);
           
         }
@@ -450,18 +451,18 @@ namespace Tensee.Banch.QYWechat
         /// <returns></returns>
         public  async Task<GetTagMemberResult> GetTagMember(EntityDto<string> input)
         {
-            string token = _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
+            string token = await _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
             //如果因为没配置好企业微信ID等获取不到token 直接返回FALSE
             if (string.IsNullOrWhiteSpace(token))
             {
                 return new GetTagMemberResult { errcode = ReturnCode_Work.系统繁忙, errmsg = "未获取到token" };
             }
 
-            return ApiHandlerWapper.TryCommonApi(accessToken =>
+            return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
                 var url = string.Format(Config.ApiWorkHost + "/cgi-bin/tag/get?access_token={0}&tagid={1}", accessToken.AsUrlData(), input.Id.ToString());
 
-                return Get.GetJson<GetTagMemberResult>(url);
+                return await Get.GetJsonAsync<GetTagMemberResult>(url);
             }, token);
 
         }
@@ -473,18 +474,18 @@ namespace Tensee.Banch.QYWechat
         /// <returns></returns>
         public async Task<AddTagMemberResult> AddTagMember(CreateTagUsersInput input)
         {
-            string token = _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
+            string token = await _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
             //如果因为没配置好企业微信ID等获取不到token 直接返回FALSE
             if (string.IsNullOrWhiteSpace(token))
             {
                 return new AddTagMemberResult { errcode = ReturnCode_Work.系统繁忙, errmsg = "未获取到token" };
             }
-            return ApiHandlerWapper.TryCommonApi(accessToken =>
+            return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
                 var url = Config.ApiWorkHost + "/cgi-bin/tag/addtagusers?access_token={0}";
                 JsonSetting jsonSetting = new JsonSetting(true);
                 var datare = input;
-                return Senparc.Weixin.CommonAPIs.CommonJsonSend.Send<AddTagMemberResult>(accessToken, url, datare, CommonJsonSendType.POST, Config.TIME_OUT, jsonSetting: jsonSetting);
+                return await CommonJsonSend.SendAsync<AddTagMemberResult>(accessToken, url, datare, CommonJsonSendType.POST, Config.TIME_OUT, jsonSetting: jsonSetting);
             }, token);
           
         }
@@ -496,18 +497,18 @@ namespace Tensee.Banch.QYWechat
         /// <returns></returns>
         public async Task<DelTagMemberResult> DelTagMember(CreateTagUsersInput input)
         {
-            string token = _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
+            string token = await _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
             //如果因为没配置好企业微信ID等获取不到token 直接返回FALSE
             if (string.IsNullOrWhiteSpace(token))
             {
                 return new DelTagMemberResult { errcode = ReturnCode_Work.系统繁忙, errmsg = "未获取到token" };
             }
-            return ApiHandlerWapper.TryCommonApi(accessToken =>
+            return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
                 var url = Config.ApiWorkHost + "/cgi-bin/tag/deltagusers?access_token={0}";
                 JsonSetting jsonSetting = new JsonSetting(true);
                 var datare = input;
-                return Senparc.Weixin.CommonAPIs.CommonJsonSend.Send<DelTagMemberResult>(accessToken, url, datare, CommonJsonSendType.POST, Config.TIME_OUT, jsonSetting: jsonSetting);
+                return await CommonJsonSend.SendAsync<DelTagMemberResult>(accessToken, url, datare, CommonJsonSendType.POST, Config.TIME_OUT, jsonSetting: jsonSetting);
             }, token);
            
         }
@@ -519,18 +520,18 @@ namespace Tensee.Banch.QYWechat
         /// <returns></returns>
         public async Task<GetTagListResult> GetTagList()
         {
-            string token = _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
+            string token = await _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
             //如果因为没配置好企业微信ID等获取不到token 直接返回FALSE
             if (string.IsNullOrWhiteSpace(token))
             {
                 return new GetTagListResult { errcode = ReturnCode_Work.系统繁忙, errmsg = "未获取到token" };
             }
 
-            return ApiHandlerWapper.TryCommonApi(accessToken =>
+            return await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
                 var url = string.Format(Config.ApiWorkHost + "/cgi-bin/tag/list?access_token={0}", accessToken.AsUrlData());
 
-                return Get.GetJson<GetTagListResult>(url);
+                return await Get.GetJsonAsync<GetTagListResult>(url);
             }, token);
         }
 
@@ -550,7 +551,7 @@ namespace Tensee.Banch.QYWechat
         /// <returns></returns>
         public async  Task<MassResult> SendText(SendTextInput input)
         {
-            string token = _cacheManager.GetCache("CacheName").Get(input.value, () => GetToken(input.value));
+            string token = await _cacheManager.GetCache("CacheName").Get(input.value, () => GetToken(input.value));
 
             //string token = "wHNPkCAccZAFYmV7Vt1AH_XM-Lon3wyE2pBpHGYLqx7hzhceOlETxDu7hq5Yvg1cVWZK2UMOzLnNXUFth1IOn6EqWfEjAyOZeEwqH5l0FRcWfgS4xxN7EXhYtinTASNHTJCIa0Iz-Jr2QelHDjDgGecpwjE7KVF0jQ1OZ2DSkTkZxZm8_NTRjYR71DSxH6eGQxlefMfxEen69lksw7XkiA";
             //如果因为没配置好企业微信ID等获取不到token 直接返回FALSE
@@ -591,7 +592,7 @@ namespace Tensee.Banch.QYWechat
         public async Task<MassResult> SendImage(SendImageInput input)
         {
             /// string token = _cacheManager.GetCache("CacheName").Get("Msg", () => GetToken("Msg"));
-            string token = _cacheManager.GetCache("CacheName").Get(input.value, () => GetToken(input.value));
+            string token = await _cacheManager.GetCache("CacheName").Get(input.value, () => GetToken(input.value));
 
             //string token = "wHNPkCAccZAFYmV7Vt1AH_XM-Lon3wyE2pBpHGYLqx7hzhceOlETxDu7hq5Yvg1cVWZK2UMOzLnNXUFth1IOn6EqWfEjAyOZeEwqH5l0FRcWfgS4xxN7EXhYtinTASNHTJCIa0Iz-Jr2QelHDjDgGecpwjE7KVF0jQ1OZ2DSkTkZxZm8_NTRjYR71DSxH6eGQxlefMfxEen69lksw7XkiA";
             //如果因为没配置好企业微信ID等获取不到token 直接返回FALSE
@@ -632,7 +633,7 @@ namespace Tensee.Banch.QYWechat
         public async Task<MassResult> SendVideo(SendVideoInput input)
         {
             //  string token = _cacheManager.GetCache("CacheName").Get("Msg", () => GetToken("Msg"));
-            string token = _cacheManager.GetCache("CacheName").Get(input.value, () => GetToken(input.value));
+            string token = await _cacheManager.GetCache("CacheName").Get(input.value, () => GetToken(input.value));
 
             //string token = "wHNPkCAccZAFYmV7Vt1AH_XM-Lon3wyE2pBpHGYLqx7hzhceOlETxDu7hq5Yvg1cVWZK2UMOzLnNXUFth1IOn6EqWfEjAyOZeEwqH5l0FRcWfgS4xxN7EXhYtinTASNHTJCIa0Iz-Jr2QelHDjDgGecpwjE7KVF0jQ1OZ2DSkTkZxZm8_NTRjYR71DSxH6eGQxlefMfxEen69lksw7XkiA";
             //如果因为没配置好企业微信ID等获取不到token 直接返回FALSE
@@ -675,7 +676,7 @@ namespace Tensee.Banch.QYWechat
         public async  Task<MassResult> SendFile(SendImageInput input)
         {
             //  string token = _cacheManager.GetCache("CacheName").Get("Msg", () => GetToken("Msg"));
-            string token = _cacheManager.GetCache("CacheName").Get(input.value, () => GetToken(input.value));
+            string token = await _cacheManager.GetCache("CacheName").Get(input.value, () => GetToken(input.value));
 
             //string token = "wHNPkCAccZAFYmV7Vt1AH_XM-Lon3wyE2pBpHGYLqx7hzhceOlETxDu7hq5Yvg1cVWZK2UMOzLnNXUFth1IOn6EqWfEjAyOZeEwqH5l0FRcWfgS4xxN7EXhYtinTASNHTJCIa0Iz-Jr2QelHDjDgGecpwjE7KVF0jQ1OZ2DSkTkZxZm8_NTRjYR71DSxH6eGQxlefMfxEen69lksw7XkiA";
             //如果因为没配置好企业微信ID等获取不到token 直接返回FALSE
@@ -719,7 +720,7 @@ namespace Tensee.Banch.QYWechat
 
 
             //  string token = _cacheManager.GetCache("CacheName").Get("Msg", () => GetToken("Msg"));
-            string token = _cacheManager.GetCache("CacheName").Get(input.value, () => GetToken(input.value));
+            string token = await _cacheManager.GetCache("CacheName").Get(input.value, () => GetToken(input.value));
 
             //string token = "wHNPkCAccZAFYmV7Vt1AH_XM-Lon3wyE2pBpHGYLqx7hzhceOlETxDu7hq5Yvg1cVWZK2UMOzLnNXUFth1IOn6EqWfEjAyOZeEwqH5l0FRcWfgS4xxN7EXhYtinTASNHTJCIa0Iz-Jr2QelHDjDgGecpwjE7KVF0jQ1OZ2DSkTkZxZm8_NTRjYR71DSxH6eGQxlefMfxEen69lksw7XkiA";
             //如果因为没配置好企业微信ID等获取不到token 直接返回FALSE
@@ -765,7 +766,7 @@ namespace Tensee.Banch.QYWechat
         public async Task<GetCheckinDataJsonResult_Result[]> GetUserCheckin(GetUserCheckinInput input)
         {
             //获取缓存里的token
-            string token = _cacheManager.GetCache("CacheName").Get("Check", () => GetToken("Check"));
+            string token = await _cacheManager.GetCache("CacheName").Get("Check", () => GetToken("Check"));
 
             //如果因为没配置好企业微信ID等获取不到token 直接返回FALSE
             if (string.IsNullOrWhiteSpace(token))
@@ -780,13 +781,13 @@ namespace Tensee.Banch.QYWechat
                 endtime = DateTimeToLinuxTime(input.EndDate),
                 useridlist=input.UserList
             };
-            var  result= ApiHandlerWapper.TryCommonApi(accessToken =>
+            var  result = await ApiHandlerWapper.TryCommonApiAsync(async accessToken =>
             {
                 var url = Config.ApiWorkHost + "/cgi-bin/checkin/getcheckindata?access_token={0}";
 
                 var data = inputData;
 
-                return Senparc.Weixin.CommonAPIs.CommonJsonSend.Send<GetCheckinDataJsonResult>(accessToken, url, data, CommonJsonSendType.POST, Config.TIME_OUT);
+                return await CommonJsonSend.SendAsync<GetCheckinDataJsonResult>(accessToken, url, data, CommonJsonSendType.POST, Config.TIME_OUT);
             }, token);
             return result.checkindata;
         }
@@ -827,10 +828,8 @@ namespace Tensee.Banch.QYWechat
         /// <returns></returns>
         private static  string DateTimeToLinuxTime(DateTime dt)
         {
-            DateTime dtStart = TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970, 1, 1));        
-            TimeSpan toNow = dt.Subtract(dtStart);
-            string timeStamp = toNow.Ticks.ToString();
-            timeStamp = timeStamp.Substring(0, timeStamp.Length - 7);
+            string timeStamp = (TimeZoneInfo.ConvertTimeToUtc(dt, TimeZoneInfo.Local) - new DateTime(1970, 1, 1)).TotalSeconds.ToString();
+            //timeStamp = timeStamp.Substring(0, timeStamp.Length - 7);
             return timeStamp;
         }
 
@@ -841,8 +840,8 @@ namespace Tensee.Banch.QYWechat
         /// <param name="dt"></param>
         /// <returns></returns>
         private static DateTime LinuxTimeToDateTime(string timeStamp)
-        {          
-            DateTime dtStart = TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970, 1, 1));
+        {
+            DateTime dtStart = TimeZoneInfo.ConvertTime(new DateTime(1970, 1, 1), TimeZoneInfo.Local);
             long lTime = long.Parse(timeStamp + "0000000");
             TimeSpan toNow = new TimeSpan(lTime);
             DateTime dtResult = dtStart.Add(toNow);
@@ -861,7 +860,7 @@ namespace Tensee.Banch.QYWechat
         public async Task<UploadTemporaryResultJson> UploadMedia(UploadMedia input)
         {       
 
-            string token = _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
+            string token = await _cacheManager.GetCache("CacheName").Get("Mail", () => GetToken("Mail"));
             if (string.IsNullOrWhiteSpace(token))
             {
                 return new UploadTemporaryResultJson { errcode=ReturnCode_Work.系统繁忙,errmsg="未能获取到token"};
@@ -876,7 +875,7 @@ namespace Tensee.Banch.QYWechat
                 fileType = UploadMediaFileType.file;
             }
            
-            return MediaApi.Upload(token, fileType, input.filenPath);
+            return await MediaApi.UploadAsync(token, fileType, input.filenPath);
         }
 
 
@@ -929,7 +928,7 @@ namespace Tensee.Banch.QYWechat
                     if (userlist.Count <= 0)//如果标签无成员  不执行删除
                     {
                         //删除标签
-                        DeleteTag(new EntityDto<string> { Id = item.tagid });
+                        await DeleteTag(new EntityDto<string> { Id = item.tagid });
                     }
                     else
                     {
@@ -937,7 +936,7 @@ namespace Tensee.Banch.QYWechat
                         if (DelTagMember(getTagMemberInput).Result.errcode.ToString() == "0")
                         {
                             //删除标签
-                            DeleteTag(new EntityDto<string> { Id = item.tagid });
+                            await DeleteTag(new EntityDto<string> { Id = item.tagid });
                         }
                     }
 
@@ -1041,9 +1040,9 @@ namespace Tensee.Banch.QYWechat
                 Asynchronous_CallBack callBack = new Asynchronous_CallBack
                 {
                     url = "",
-                    token = GetToken("Mail")
+                    token = await GetToken("Mail")
                 };
-                return BatchReplaceParty(GetToken("Mail"), mediaId, callBack);
+                return BatchReplaceParty(await GetToken("Mail"), mediaId, callBack);
 
             }
         }
@@ -1178,7 +1177,7 @@ namespace Tensee.Banch.QYWechat
         /// <returns></returns>
         public async Task<GetWechatLoginUserIdByCodeOutput> GetUrlByPageResult(EntityDto<string> input)
         {
-            string corpID = GetWechatConfig("CorpID");
+            string corpID = await GetWechatConfig("CorpID");
             string url = string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri={1}&response_type={2}&scope={3}&state={4}#wechat_redirect", corpID.AsUrlData(), input.Id.AsUrlData(), "code".AsUrlData(), "snsapi_base".AsUrlData(), "".AsUrlData());
             GetWechatLoginUserIdByCodeOutput output = new GetWechatLoginUserIdByCodeOutput
             {
@@ -1196,7 +1195,7 @@ namespace Tensee.Banch.QYWechat
         {
             var con = _wechatConfig.GetAll().Where(r => r.PageRuslt.Trim() == input.PageResult.Trim()).FirstOrDefault();
 
-            string accessToken = _cacheManager.GetCache("CacheName").Get(con.Value.Trim(), () => GetToken(con.Value.Trim()));
+            string accessToken = await _cacheManager.GetCache("CacheName").Get(con.Value.Trim(), () => GetToken(con.Value.Trim()));
             var url = string.Format(Config.ApiWorkHost + "/cgi-bin/user/getuserinfo?access_token={0}&code={1}", accessToken.AsUrlData(), input.Code.AsUrlData(), con.AgentId.AsUrlData());
 
             var data = Get.GetJson<GetUserInfoResult>(url);
@@ -1210,7 +1209,7 @@ namespace Tensee.Banch.QYWechat
             }
             else
             {
-                var result = UserManager.Users.Where(r => r.UserName == data.UserId).FirstOrDefault();
+                var result = await UserManager.Users.Where(r => r.UserName == data.UserId).FirstOrDefaultAsync();
                 if (result == null)
                 {
                      throw new UserFriendlyException(L("找不到员工！"));
@@ -1241,9 +1240,9 @@ namespace Tensee.Banch.QYWechat
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        private string GetWechatConfig(string value)
+        private async Task<string> GetWechatConfig(string value)
         {
-            var data = _wechatConfig.GetAll().Where(r => r.Value == value.Trim()).FirstOrDefault();
+            var data = await _wechatConfig.GetAll().Where(r => r.Value == value.Trim()).FirstOrDefaultAsync();
             return data == null ? "" : data.Secret;
          }
 
@@ -1282,12 +1281,12 @@ namespace Tensee.Banch.QYWechat
         /// </summary>
         /// <param name="tokenType"></param>
         /// <returns></returns>
-        private string GetToken(string tokenType)
+        private async Task<string> GetToken(string tokenType)
         {
             //公司ID
-            string corpID = GetWechatConfig("CorpID");
+            string corpID = await GetWechatConfig("CorpID");
             //应用的Secret
-            string value = GetWechatConfig(tokenType.Trim());
+            string value = await GetWechatConfig(tokenType.Trim());
             if (string.IsNullOrWhiteSpace(corpID) || string.IsNullOrWhiteSpace(value))
             {
                 return "";

@@ -16,13 +16,16 @@ using Tensee.Banch.QYWechat.Dto.Agent;
 
 namespace Tensee.Banch.QYWechat
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public interface IQYWechatAppService: IApplicationService
     {
         #region 员工
         /// <summary>
         /// 获取员工信息
         /// </summary>
-        /// <param name="userId"></param>
+        /// <param name="input"></param>
         /// <returns></returns>
         Task<GetMemberResult> GetMember(DeleteWeChatUserInput input);
 
@@ -30,7 +33,7 @@ namespace Tensee.Banch.QYWechat
         /// <summary>
         /// 删除员工
         /// </summary>
-        /// <param name="userId"></param>
+        /// <param name="input"></param>
         /// <returns></returns>
         Task<WorkJsonResult> DeleteMember(EntityDto<long> input);
 
@@ -49,18 +52,11 @@ namespace Tensee.Banch.QYWechat
         /// <returns></returns>
         Task<GetDepartmentMemberResult> GetDepartmentMember(GetDepartmentWeChatUserInput input);
 
-        /* <param name="status">0获取全部员工，1获取已关注成员列表，2获取禁用成员列表，4获取未关注成员列表。status可叠加</param>*/
-        /// <summary>
-        /// 获取部门成员(详情)【QY移植修改】
-        /// </summary>
-        /// <param name="accessTokenOrAppKey">调用接口凭证（AccessToken）或AppKey（根据AccessTokenContainer.BuildingKey(corpId, corpSecret)方法获得）</param>
-        /// <param name="departmentId">获取的部门id</param>
-        /// <param name="fetchChild">（）1/0：是否递归获取子部门下面的成员</param>
-        /// <param name="maxJsonLength">设置 JavaScriptSerializer 类接受的 JSON 字符串的最大长度</param>
-        /// <remarks>
-        /// 2016-05-03：Zeje添加参数maxJsonLength：企业号通讯录扩容后，存在Json长度不够的情况。
-        /// </remarks>
-        /// <returns></returns>
+       /// <summary>
+       /// 获取组织架构成员
+       /// </summary>
+       /// <param name="input"></param>
+       /// <returns></returns>
         Task<GetDepartmentMemberInfoResult> GetDepartmentMemberInfo(GetDepartmentWeChatUserInput input);
         #endregion
 
@@ -148,7 +144,11 @@ namespace Tensee.Banch.QYWechat
         /// <param name="input"></param>
         /// <returns></returns>
         Task<GetWechatLoginUserIdByCodeOutput> GetUrlByPageResult(EntityDto<string> input);
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         object GetWechatConfigByPageResult1(string value);
 
         //  object GetWechatLoginUserIdByCode(GetWechatLoginInput input);
@@ -212,10 +212,24 @@ namespace Tensee.Banch.QYWechat
         ///   一键同步组织架构
         /// </summary>
         Task<AsynchronousJobId> ExportDepartment(EntityDto<int?> input);
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         Task ExportTag(EntityDto<int?> input); 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         Task<UploadTemporaryResultJson> UploadMedia(UploadMedia input);
         #endregion
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         Task<GetWechatLoginUserIdByCodeOutput> GetWechatLoginUserIdByCode(GetWechatLoginInput input);
 
 

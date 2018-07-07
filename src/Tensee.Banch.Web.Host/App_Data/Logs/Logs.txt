@@ -197,3 +197,469 @@ Hangfire.Common.JobLoadException: Could not load the job. See inner exception fo
 INFO  2018-07-03 17:28:06,309 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/images/throbber.gif  
 INFO  2018-07-03 17:28:06,311 [3    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/images/throbber.gif'. Physical path: 'N/A'
 INFO  2018-07-03 17:28:06,311 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.7353ms 200 image/gif
+DEBUG 2018-07-07 10:49:34,651 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-07-07 10:49:34,862 [1    ] Abp.Modules.AbpModuleManager             - Found 23 ABP modules in total.
+DEBUG 2018-07-07 10:49:34,896 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.Web.Startup.BanchWebHostModule, Tensee.Banch.Web.Host, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,899 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Web.Authentication.External.WechatMiniProgramAuthModule, Tensee.Web.Authentication.External, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,900 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.Web.BanchWebCoreModule, Tensee.Banch.Web.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,900 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.BanchApplicationModule, Tensee.Banch.Application, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,900 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.BanchCoreModule, Tensee.Banch.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,900 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,901 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,901 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,902 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,903 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetZeroCore.AbpAspNetZeroCoreModule, Abp.AspNetZeroCore, Version=1.1.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,904 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.MailKit.AbpMailKitModule, Abp.MailKit, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,904 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.EntityFrameworkCore.BanchEntityFrameworkCoreModule, Tensee.Banch.EntityFrameworkCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,904 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,905 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,905 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,905 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.IdentityServer4.AbpZeroCoreIdentityServerEntityFrameworkCoreModule, Abp.ZeroCore.IdentityServer4.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,905 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.IdentityServer4.AbpZeroCoreIdentityServerModule, Abp.ZeroCore.IdentityServer4, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,905 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetZeroCore.Web.AbpAspNetZeroCoreWebModule, Abp.AspNetZeroCore.Web, Version=1.1.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,906 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,906 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,906 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,906 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireAspNetCoreModule, Abp.HangFire.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,907 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:34,910 [1    ] Abp.Modules.AbpModuleManager             - 23 modules loaded.
+DEBUG 2018-07-07 10:49:35,046 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-07 10:49:35,046 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-07 10:49:35,047 [1    ] o.Configuration.LanguageManagementConfig - Converted Banch (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-07 10:49:35,047 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-07 10:49:35,935 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Tensee.Banch.EntityFrameworkCore.BanchDbContext, Tensee.Banch.EntityFrameworkCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:37,175 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-07-07 10:49:37,253 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-07-07 10:49:37,306 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-07-07 10:49:37,379 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Banch
+DEBUG 2018-07-07 10:49:37,415 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-07-07 10:49:37,427 [1    ] bp.Hangfire.HangfireBackgroundJobManager - Start background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2018-07-07 10:49:37,482 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 2 classes define auto mapping attributes
+DEBUG 2018-07-07 10:49:37,482 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Tensee.Banch.Web.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-07-07 10:49:37,488 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Tensee.Banch.Friendships.Cache.FriendCacheItem
+DEBUG 2018-07-07 10:49:38,197 [3    ] oCore.Licensing.AspNetZeroLicenseChecker - C:\Users\liguo\AppData\Local\Temp\e77cfb4439066107de8382b55403ed34.tmp
+FATAL 2018-07-07 10:49:38,236 [3    ] oCore.Licensing.AspNetZeroLicenseChecker - Failed to validate project name. Should not rename a project downloaded from aspnetzero.com. You can contact to info@aspnetzero.com if you are using a licensed product.
+StartIndex cannot be less than zero.
+Parameter name: startIndex
+System.ArgumentOutOfRangeException: StartIndex cannot be less than zero.
+Parameter name: startIndex
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at Abp.AspNetZeroCore.Licensing.AspNetZeroLicenseChecker.hm6KbyFNGd6mE4M4H9(Object , Int32 , Int32 )
+   at Abp.AspNetZeroCore.Licensing.AspNetZeroLicenseChecker.GetHashedProjectName()
+   at Abp.AspNetZeroCore.Licensing.AspNetZeroLicenseChecker.IsProjectNameValid()
+   at Abp.AspNetZeroCore.Licensing.AspNetZeroLicenseChecker.CheckInternal()
+DEBUG 2018-07-07 10:49:46,549 [1    ] enancy.SubscriptionExpirationCheckWorker - Start background worker: Tensee.Banch.MultiTenancy.SubscriptionExpirationCheckWorker
+DEBUG 2018-07-07 10:49:46,551 [1    ] cy.SubscriptionExpireEmailNotifierWorker - Start background worker: Tensee.Banch.MultiTenancy.SubscriptionExpireEmailNotifierWorker
+INFO  2018-07-07 10:49:47,119 [1    ] Hangfire.SqlServer.SqlServerStorage      - Start installing Hangfire SQL objects...
+INFO  2018-07-07 10:49:47,212 [1    ] Hangfire.SqlServer.SqlServerStorage      - Hangfire SQL objects installed.
+INFO  2018-07-07 10:49:47,249 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2018-07-07 10:49:47,253 [1    ] Hangfire.BackgroundJobServer             - Using job storage: 'SQL Server: 14.152.59.73@TenseeBanch'
+INFO  2018-07-07 10:49:47,253 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2018-07-07 10:49:47,253 [1    ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2018-07-07 10:49:47,253 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2018-07-07 10:49:47,253 [1    ] Hangfire.BackgroundJobServer             -     Worker count: 20
+INFO  2018-07-07 10:49:47,254 [1    ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'
+INFO  2018-07-07 10:49:47,254 [1    ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15
+INFO  2018-07-07 10:49:47,254 [1    ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15
+DEBUG 2018-07-07 10:49:48,083 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-07-07 10:49:48,084 [1    ] bp.Hangfire.HangfireBackgroundJobManager - Stop background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2018-07-07 10:49:48,085 [1    ] enancy.SubscriptionExpirationCheckWorker - Stop background worker: Tensee.Banch.MultiTenancy.SubscriptionExpirationCheckWorker
+DEBUG 2018-07-07 10:49:48,085 [1    ] cy.SubscriptionExpireEmailNotifierWorker - Stop background worker: Tensee.Banch.MultiTenancy.SubscriptionExpireEmailNotifierWorker
+DEBUG 2018-07-07 10:49:48,086 [1    ] bp.Hangfire.HangfireBackgroundJobManager - WaitToStop background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2018-07-07 10:49:48,086 [1    ] enancy.SubscriptionExpirationCheckWorker - WaitToStop background worker: Tensee.Banch.MultiTenancy.SubscriptionExpirationCheckWorker
+DEBUG 2018-07-07 10:49:48,086 [1    ] cy.SubscriptionExpireEmailNotifierWorker - WaitToStop background worker: Tensee.Banch.MultiTenancy.SubscriptionExpireEmailNotifierWorker
+DEBUG 2018-07-07 10:49:48,086 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+INFO  2018-07-07 10:49:48,120 [5    ] Hangfire.BackgroundJobServer             - Hangfire Server stopped.
+DEBUG 2018-07-07 10:49:53,895 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-07-07 10:49:53,923 [1    ] Abp.Modules.AbpModuleManager             - Found 23 ABP modules in total.
+DEBUG 2018-07-07 10:49:53,945 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.Web.Startup.BanchWebHostModule, Tensee.Banch.Web.Host, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,949 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Web.Authentication.External.WechatMiniProgramAuthModule, Tensee.Web.Authentication.External, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,949 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.Web.BanchWebCoreModule, Tensee.Banch.Web.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,949 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.BanchApplicationModule, Tensee.Banch.Application, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,950 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.BanchCoreModule, Tensee.Banch.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,950 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,950 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,950 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,951 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,951 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetZeroCore.AbpAspNetZeroCoreModule, Abp.AspNetZeroCore, Version=1.1.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,951 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.MailKit.AbpMailKitModule, Abp.MailKit, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,952 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.EntityFrameworkCore.BanchEntityFrameworkCoreModule, Tensee.Banch.EntityFrameworkCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,952 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,952 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,952 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,953 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.IdentityServer4.AbpZeroCoreIdentityServerEntityFrameworkCoreModule, Abp.ZeroCore.IdentityServer4.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,953 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.IdentityServer4.AbpZeroCoreIdentityServerModule, Abp.ZeroCore.IdentityServer4, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,953 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetZeroCore.Web.AbpAspNetZeroCoreWebModule, Abp.AspNetZeroCore.Web, Version=1.1.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,953 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,953 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,954 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,954 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireAspNetCoreModule, Abp.HangFire.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,954 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:53,957 [1    ] Abp.Modules.AbpModuleManager             - 23 modules loaded.
+DEBUG 2018-07-07 10:49:54,026 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-07 10:49:54,026 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-07 10:49:54,026 [1    ] o.Configuration.LanguageManagementConfig - Converted Banch (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-07 10:49:54,026 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-07 10:49:54,419 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Tensee.Banch.EntityFrameworkCore.BanchDbContext, Tensee.Banch.EntityFrameworkCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 10:49:55,036 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-07-07 10:49:55,092 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-07-07 10:49:55,145 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-07-07 10:49:55,208 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Banch
+DEBUG 2018-07-07 10:49:55,241 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-07-07 10:49:55,249 [1    ] bp.Hangfire.HangfireBackgroundJobManager - Start background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2018-07-07 10:49:55,301 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 2 classes define auto mapping attributes
+DEBUG 2018-07-07 10:49:55,301 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Tensee.Banch.Web.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-07-07 10:49:55,304 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Tensee.Banch.Friendships.Cache.FriendCacheItem
+DEBUG 2018-07-07 10:50:00,150 [1    ] enancy.SubscriptionExpirationCheckWorker - Start background worker: Tensee.Banch.MultiTenancy.SubscriptionExpirationCheckWorker
+DEBUG 2018-07-07 10:50:00,153 [1    ] cy.SubscriptionExpireEmailNotifierWorker - Start background worker: Tensee.Banch.MultiTenancy.SubscriptionExpireEmailNotifierWorker
+INFO  2018-07-07 10:50:00,592 [1    ] Hangfire.SqlServer.SqlServerStorage      - Start installing Hangfire SQL objects...
+INFO  2018-07-07 10:50:00,672 [1    ] Hangfire.SqlServer.SqlServerStorage      - Hangfire SQL objects installed.
+INFO  2018-07-07 10:50:00,708 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2018-07-07 10:50:00,712 [1    ] Hangfire.BackgroundJobServer             - Using job storage: 'SQL Server: 14.152.59.73@TenseeBanch'
+INFO  2018-07-07 10:50:00,712 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2018-07-07 10:50:00,712 [1    ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2018-07-07 10:50:00,712 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2018-07-07 10:50:00,712 [1    ] Hangfire.BackgroundJobServer             -     Worker count: 20
+INFO  2018-07-07 10:50:00,713 [1    ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'
+INFO  2018-07-07 10:50:00,713 [1    ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15
+INFO  2018-07-07 10:50:00,713 [1    ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15
+INFO  2018-07-07 10:50:01,526 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/  
+INFO  2018-07-07 10:50:02,150 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action Tensee.Banch.Web.Controllers.HomeController.Index (Tensee.Banch.Web.Host)
+INFO  2018-07-07 10:50:02,229 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Tensee.Banch.Web.Controllers.HomeController.Index (Tensee.Banch.Web.Host) - Validation state: Valid
+INFO  2018-07-07 10:50:02,233 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Tensee.Banch.Web.Controllers.HomeController.Index (Tensee.Banch.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 1.9137ms.
+INFO  2018-07-07 10:50:02,252 [8    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-07-07 10:50:02,264 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Tensee.Banch.Web.Controllers.HomeController.Index (Tensee.Banch.Web.Host) in 110.6046ms
+INFO  2018-07-07 10:50:02,323 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 800.6245ms 302 
+INFO  2018-07-07 10:50:02,324 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger  
+INFO  2018-07-07 10:50:02,335 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.5174ms 301 
+INFO  2018-07-07 10:50:02,342 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/index.html  
+INFO  2018-07-07 10:50:02,366 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 23.2724ms 200 text/html
+INFO  2018-07-07 10:50:02,428 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/swagger-ui-bundle.js  
+INFO  2018-07-07 10:50:02,430 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/swagger-ui.css  
+INFO  2018-07-07 10:50:02,430 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-07-07 10:50:02,514 [9    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+INFO  2018-07-07 10:50:02,517 [4    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+INFO  2018-07-07 10:50:02,531 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 100.9134ms 200 application/javascript
+INFO  2018-07-07 10:50:02,531 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 101.8225ms 200 text/css
+INFO  2018-07-07 10:50:02,629 [9    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+INFO  2018-07-07 10:50:02,630 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 201.2599ms 200 application/javascript
+INFO  2018-07-07 10:50:03,189 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/v1/swagger.json  
+INFO  2018-07-07 10:50:03,790 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 600.1556ms 200 application/json;charset=utf-8
+INFO  2018-07-07 10:58:29,254 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/  
+INFO  2018-07-07 10:58:29,270 [51   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action Tensee.Banch.Web.Controllers.HomeController.Index (Tensee.Banch.Web.Host)
+INFO  2018-07-07 10:58:29,271 [51   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Tensee.Banch.Web.Controllers.HomeController.Index (Tensee.Banch.Web.Host) - Validation state: Valid
+INFO  2018-07-07 10:58:29,271 [51   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Tensee.Banch.Web.Controllers.HomeController.Index (Tensee.Banch.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.0067ms.
+INFO  2018-07-07 10:58:29,271 [51   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-07-07 10:58:29,271 [51   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Tensee.Banch.Web.Controllers.HomeController.Index (Tensee.Banch.Web.Host) in 1.6358ms
+INFO  2018-07-07 10:58:29,271 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 17.897ms 302 
+INFO  2018-07-07 10:58:29,282 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger  
+INFO  2018-07-07 10:58:29,283 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.0618ms 301 
+INFO  2018-07-07 10:58:29,289 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/index.html  
+INFO  2018-07-07 10:58:29,290 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.9924ms 200 text/html
+INFO  2018-07-07 10:58:29,335 [58   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/swagger-ui-bundle.js  
+INFO  2018-07-07 10:58:29,337 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/swagger-ui.css  
+INFO  2018-07-07 10:58:29,338 [56   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-07-07 10:58:29,361 [58   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-07-07 10:58:29,361 [51   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-07-07 10:58:29,361 [56   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-07-07 10:58:29,363 [58   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 27.7564ms 304 application/javascript
+INFO  2018-07-07 10:58:29,363 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 25.6417ms 304 text/css
+INFO  2018-07-07 10:58:29,363 [56   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 24.9134ms 304 application/javascript
+INFO  2018-07-07 10:58:29,886 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/v1/swagger.json  
+INFO  2018-07-07 10:58:29,944 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 58.693ms 200 application/json;charset=utf-8
+DEBUG 2018-07-07 11:00:42,393 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-07-07 11:00:42,422 [1    ] Abp.Modules.AbpModuleManager             - Found 23 ABP modules in total.
+DEBUG 2018-07-07 11:00:42,444 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.Web.Startup.BanchWebHostModule, Tensee.Banch.Web.Host, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,447 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Web.Authentication.External.WechatMiniProgramAuthModule, Tensee.Web.Authentication.External, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,448 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.Web.BanchWebCoreModule, Tensee.Banch.Web.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,448 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.BanchApplicationModule, Tensee.Banch.Application, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,448 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.BanchCoreModule, Tensee.Banch.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,449 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,449 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,449 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,450 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,450 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetZeroCore.AbpAspNetZeroCoreModule, Abp.AspNetZeroCore, Version=1.1.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,450 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.MailKit.AbpMailKitModule, Abp.MailKit, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,451 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.EntityFrameworkCore.BanchEntityFrameworkCoreModule, Tensee.Banch.EntityFrameworkCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,451 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,451 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,451 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,452 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.IdentityServer4.AbpZeroCoreIdentityServerEntityFrameworkCoreModule, Abp.ZeroCore.IdentityServer4.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,453 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.IdentityServer4.AbpZeroCoreIdentityServerModule, Abp.ZeroCore.IdentityServer4, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,453 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetZeroCore.Web.AbpAspNetZeroCoreWebModule, Abp.AspNetZeroCore.Web, Version=1.1.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,453 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,453 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,454 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,454 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireAspNetCoreModule, Abp.HangFire.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,454 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:42,458 [1    ] Abp.Modules.AbpModuleManager             - 23 modules loaded.
+DEBUG 2018-07-07 11:00:42,533 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-07 11:00:42,533 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-07 11:00:42,533 [1    ] o.Configuration.LanguageManagementConfig - Converted Banch (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-07 11:00:42,533 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-07 11:00:42,944 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Tensee.Banch.EntityFrameworkCore.BanchDbContext, Tensee.Banch.EntityFrameworkCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:43,565 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-07-07 11:00:43,624 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-07-07 11:00:43,677 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-07-07 11:00:43,745 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Banch
+DEBUG 2018-07-07 11:00:43,780 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-07-07 11:00:43,789 [1    ] bp.Hangfire.HangfireBackgroundJobManager - Start background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2018-07-07 11:00:43,857 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 2 classes define auto mapping attributes
+DEBUG 2018-07-07 11:00:43,858 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Tensee.Banch.Web.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-07-07 11:00:43,862 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Tensee.Banch.Friendships.Cache.FriendCacheItem
+DEBUG 2018-07-07 11:00:48,933 [1    ] enancy.SubscriptionExpirationCheckWorker - Start background worker: Tensee.Banch.MultiTenancy.SubscriptionExpirationCheckWorker
+DEBUG 2018-07-07 11:00:48,936 [1    ] cy.SubscriptionExpireEmailNotifierWorker - Start background worker: Tensee.Banch.MultiTenancy.SubscriptionExpireEmailNotifierWorker
+INFO  2018-07-07 11:00:49,525 [1    ] Hangfire.SqlServer.SqlServerStorage      - Start installing Hangfire SQL objects...
+INFO  2018-07-07 11:00:49,621 [1    ] Hangfire.SqlServer.SqlServerStorage      - Hangfire SQL objects installed.
+INFO  2018-07-07 11:00:49,667 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2018-07-07 11:00:49,672 [1    ] Hangfire.BackgroundJobServer             - Using job storage: 'SQL Server: 14.152.59.73@TenseeBanch'
+INFO  2018-07-07 11:00:49,673 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2018-07-07 11:00:49,673 [1    ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2018-07-07 11:00:49,673 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2018-07-07 11:00:49,673 [1    ] Hangfire.BackgroundJobServer             -     Worker count: 20
+INFO  2018-07-07 11:00:49,673 [1    ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'
+INFO  2018-07-07 11:00:49,673 [1    ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15
+INFO  2018-07-07 11:00:49,673 [1    ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15
+DEBUG 2018-07-07 11:00:56,842 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-07-07 11:00:56,872 [1    ] Abp.Modules.AbpModuleManager             - Found 23 ABP modules in total.
+DEBUG 2018-07-07 11:00:56,896 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.Web.Startup.BanchWebHostModule, Tensee.Banch.Web.Host, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,900 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Web.Authentication.External.WechatMiniProgramAuthModule, Tensee.Web.Authentication.External, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,900 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.Web.BanchWebCoreModule, Tensee.Banch.Web.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,901 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.BanchApplicationModule, Tensee.Banch.Application, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,901 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.BanchCoreModule, Tensee.Banch.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,901 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,902 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,902 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,902 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,903 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetZeroCore.AbpAspNetZeroCoreModule, Abp.AspNetZeroCore, Version=1.1.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,903 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.MailKit.AbpMailKitModule, Abp.MailKit, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,903 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.EntityFrameworkCore.BanchEntityFrameworkCoreModule, Tensee.Banch.EntityFrameworkCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,903 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,904 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,904 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,904 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.IdentityServer4.AbpZeroCoreIdentityServerEntityFrameworkCoreModule, Abp.ZeroCore.IdentityServer4.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,904 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.IdentityServer4.AbpZeroCoreIdentityServerModule, Abp.ZeroCore.IdentityServer4, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,905 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetZeroCore.Web.AbpAspNetZeroCoreWebModule, Abp.AspNetZeroCore.Web, Version=1.1.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,905 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,905 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,905 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,905 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireAspNetCoreModule, Abp.HangFire.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,906 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:56,909 [1    ] Abp.Modules.AbpModuleManager             - 23 modules loaded.
+DEBUG 2018-07-07 11:00:56,984 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-07 11:00:56,984 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-07 11:00:56,984 [1    ] o.Configuration.LanguageManagementConfig - Converted Banch (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-07 11:00:56,985 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-07 11:00:57,395 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Tensee.Banch.EntityFrameworkCore.BanchDbContext, Tensee.Banch.EntityFrameworkCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:00:58,040 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-07-07 11:00:58,098 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-07-07 11:00:58,148 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-07-07 11:00:58,190 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Banch
+DEBUG 2018-07-07 11:00:58,224 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-07-07 11:00:58,233 [1    ] bp.Hangfire.HangfireBackgroundJobManager - Start background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2018-07-07 11:00:58,286 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 2 classes define auto mapping attributes
+DEBUG 2018-07-07 11:00:58,286 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Tensee.Banch.Web.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-07-07 11:00:58,289 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Tensee.Banch.Friendships.Cache.FriendCacheItem
+DEBUG 2018-07-07 11:01:02,841 [1    ] enancy.SubscriptionExpirationCheckWorker - Start background worker: Tensee.Banch.MultiTenancy.SubscriptionExpirationCheckWorker
+DEBUG 2018-07-07 11:01:02,844 [1    ] cy.SubscriptionExpireEmailNotifierWorker - Start background worker: Tensee.Banch.MultiTenancy.SubscriptionExpireEmailNotifierWorker
+INFO  2018-07-07 11:01:03,288 [1    ] Hangfire.SqlServer.SqlServerStorage      - Start installing Hangfire SQL objects...
+INFO  2018-07-07 11:01:03,370 [1    ] Hangfire.SqlServer.SqlServerStorage      - Hangfire SQL objects installed.
+INFO  2018-07-07 11:01:03,404 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2018-07-07 11:01:03,407 [1    ] Hangfire.BackgroundJobServer             - Using job storage: 'SQL Server: 14.152.59.73@TenseeBanch'
+INFO  2018-07-07 11:01:03,408 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2018-07-07 11:01:03,408 [1    ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2018-07-07 11:01:03,408 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2018-07-07 11:01:03,408 [1    ] Hangfire.BackgroundJobServer             -     Worker count: 20
+INFO  2018-07-07 11:01:03,408 [1    ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'
+INFO  2018-07-07 11:01:03,408 [1    ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15
+INFO  2018-07-07 11:01:03,408 [1    ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15
+INFO  2018-07-07 11:01:04,116 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/index.html  
+INFO  2018-07-07 11:01:04,829 [9    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/index.html'. Physical path: 'N/A'
+INFO  2018-07-07 11:01:04,848 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 728.0167ms 200 text/html
+INFO  2018-07-07 11:01:04,939 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/object-assign-pollyfill.js  
+INFO  2018-07-07 11:01:04,939 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/css/print.css  
+INFO  2018-07-07 11:01:04,940 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/jquery.ba-bbq.min.js  
+INFO  2018-07-07 11:01:04,950 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/jquery.slideto.min.js  
+INFO  2018-07-07 11:01:04,951 [3    ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/print.css was not modified
+INFO  2018-07-07 11:01:04,951 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery.ba-bbq.min.js was not modified
+INFO  2018-07-07 11:01:04,951 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/css/reset.css  
+INFO  2018-07-07 11:01:04,952 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/object-assign-pollyfill.js was not modified
+INFO  2018-07-07 11:01:04,952 [4    ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/reset.css was not modified
+INFO  2018-07-07 11:01:04,953 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery.slideto.min.js was not modified
+INFO  2018-07-07 11:01:04,957 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 17.068ms 304 application/javascript
+INFO  2018-07-07 11:01:04,957 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/jquery-1.8.0.min.js  
+INFO  2018-07-07 11:01:04,958 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 19.1906ms 304 application/javascript
+INFO  2018-07-07 11:01:04,958 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery-1.8.0.min.js was not modified
+INFO  2018-07-07 11:01:04,959 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.3903ms 304 application/javascript
+INFO  2018-07-07 11:01:04,957 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 17.9886ms 304 text/css
+INFO  2018-07-07 11:01:04,959 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.8595ms 304 text/css
+INFO  2018-07-07 11:01:04,959 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8.8188ms 304 application/javascript
+INFO  2018-07-07 11:01:05,038 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/jquery.wiggle.min.js  
+INFO  2018-07-07 11:01:05,038 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/backbone-min.js  
+INFO  2018-07-07 11:01:05,038 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/lodash.min.js  
+INFO  2018-07-07 11:01:05,038 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/handlebars-4.0.5.js  
+INFO  2018-07-07 11:01:05,039 [3    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/backbone-min.js was not modified
+INFO  2018-07-07 11:01:05,039 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/lodash.min.js was not modified
+INFO  2018-07-07 11:01:05,039 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.1487ms 304 application/javascript
+INFO  2018-07-07 11:01:05,039 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.0934ms 304 application/javascript
+INFO  2018-07-07 11:01:05,039 [4    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery.wiggle.min.js was not modified
+INFO  2018-07-07 11:01:05,039 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.4159ms 304 application/javascript
+INFO  2018-07-07 11:01:05,040 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/handlebars-4.0.5.js was not modified
+INFO  2018-07-07 11:01:05,043 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.6435ms 304 application/javascript
+INFO  2018-07-07 11:01:05,043 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/swagger-ui.js  
+INFO  2018-07-07 11:01:05,061 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/highlight.9.1.0.pack.js  
+INFO  2018-07-07 11:01:05,063 [3    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/highlight.9.1.0.pack.js was not modified
+INFO  2018-07-07 11:01:05,063 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.2229ms 304 application/javascript
+INFO  2018-07-07 11:01:05,112 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/css/typography.css  
+INFO  2018-07-07 11:01:05,116 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/typography.css was not modified
+INFO  2018-07-07 11:01:05,116 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.9218ms 304 text/css
+INFO  2018-07-07 11:01:05,127 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/highlight.9.1.0.pack_extended.js  
+INFO  2018-07-07 11:01:05,129 [4    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/highlight.9.1.0.pack_extended.js was not modified
+INFO  2018-07-07 11:01:05,129 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.3536ms 304 application/javascript
+INFO  2018-07-07 11:01:05,132 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/css/screen.css  
+INFO  2018-07-07 11:01:05,133 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/screen.css was not modified
+INFO  2018-07-07 11:01:05,133 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.337ms 304 text/css
+INFO  2018-07-07 11:01:05,137 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/images/logo_small.png  
+INFO  2018-07-07 11:01:05,137 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/jsoneditor.min.js  
+INFO  2018-07-07 11:01:05,138 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jsoneditor.min.js was not modified
+INFO  2018-07-07 11:01:05,138 [4    ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/logo_small.png was not modified
+INFO  2018-07-07 11:01:05,138 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.0472ms 304 application/javascript
+INFO  2018-07-07 11:01:05,138 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.3232ms 304 image/png
+INFO  2018-07-07 11:01:05,154 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/marked.js  
+INFO  2018-07-07 11:01:05,155 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/marked.js was not modified
+INFO  2018-07-07 11:01:05,155 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.1684ms 304 application/javascript
+INFO  2018-07-07 11:01:05,155 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/swagger-oauth.js  
+INFO  2018-07-07 11:01:05,156 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/swagger-oauth.js was not modified
+INFO  2018-07-07 11:01:05,156 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.9249ms 304 application/javascript
+INFO  2018-07-07 11:01:05,250 [4    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui.js'. Physical path: 'N/A'
+INFO  2018-07-07 11:01:05,282 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 238.7854ms 200 application/javascript
+DEBUG 2018-07-07 11:05:44,965 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-07-07 11:05:45,056 [1    ] Abp.Modules.AbpModuleManager             - Found 23 ABP modules in total.
+DEBUG 2018-07-07 11:05:45,095 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.Web.Startup.BanchWebHostModule, Tensee.Banch.Web.Host, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,099 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Web.Authentication.External.WechatMiniProgramAuthModule, Tensee.Web.Authentication.External, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,099 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.Web.BanchWebCoreModule, Tensee.Banch.Web.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,100 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.BanchApplicationModule, Tensee.Banch.Application, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,100 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.BanchCoreModule, Tensee.Banch.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,101 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,101 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,101 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,102 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,102 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetZeroCore.AbpAspNetZeroCoreModule, Abp.AspNetZeroCore, Version=1.1.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,103 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.MailKit.AbpMailKitModule, Abp.MailKit, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,103 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Tensee.Banch.EntityFrameworkCore.BanchEntityFrameworkCoreModule, Tensee.Banch.EntityFrameworkCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,103 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,103 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,104 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,104 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.IdentityServer4.AbpZeroCoreIdentityServerEntityFrameworkCoreModule, Abp.ZeroCore.IdentityServer4.EntityFrameworkCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,104 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.IdentityServer4.AbpZeroCoreIdentityServerModule, Abp.ZeroCore.IdentityServer4, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,104 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetZeroCore.Web.AbpAspNetZeroCoreWebModule, Abp.AspNetZeroCore.Web, Version=1.1.3.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,104 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,105 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,105 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,106 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireAspNetCoreModule, Abp.HangFire.AspNetCore, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,107 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.7.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:45,113 [1    ] Abp.Modules.AbpModuleManager             - 23 modules loaded.
+DEBUG 2018-07-07 11:05:45,194 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-07 11:05:45,194 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-07 11:05:45,194 [1    ] o.Configuration.LanguageManagementConfig - Converted Banch (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-07 11:05:45,194 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-07 11:05:45,649 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Tensee.Banch.EntityFrameworkCore.BanchDbContext, Tensee.Banch.EntityFrameworkCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-07 11:05:46,260 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-07-07 11:05:46,315 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-07-07 11:05:46,369 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-07-07 11:05:46,413 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Banch
+DEBUG 2018-07-07 11:05:46,447 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-07-07 11:05:46,454 [1    ] bp.Hangfire.HangfireBackgroundJobManager - Start background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2018-07-07 11:05:46,503 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 2 classes define auto mapping attributes
+DEBUG 2018-07-07 11:05:46,504 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Tensee.Banch.Web.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-07-07 11:05:46,509 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Tensee.Banch.Friendships.Cache.FriendCacheItem
+DEBUG 2018-07-07 11:05:51,215 [1    ] enancy.SubscriptionExpirationCheckWorker - Start background worker: Tensee.Banch.MultiTenancy.SubscriptionExpirationCheckWorker
+DEBUG 2018-07-07 11:05:51,217 [1    ] cy.SubscriptionExpireEmailNotifierWorker - Start background worker: Tensee.Banch.MultiTenancy.SubscriptionExpireEmailNotifierWorker
+INFO  2018-07-07 11:05:51,667 [1    ] Hangfire.SqlServer.SqlServerStorage      - Start installing Hangfire SQL objects...
+INFO  2018-07-07 11:05:51,754 [1    ] Hangfire.SqlServer.SqlServerStorage      - Hangfire SQL objects installed.
+INFO  2018-07-07 11:05:51,791 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2018-07-07 11:05:51,794 [1    ] Hangfire.BackgroundJobServer             - Using job storage: 'SQL Server: 14.152.59.73@TenseeBanch'
+INFO  2018-07-07 11:05:51,795 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2018-07-07 11:05:51,795 [1    ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2018-07-07 11:05:51,795 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2018-07-07 11:05:51,795 [1    ] Hangfire.BackgroundJobServer             -     Worker count: 20
+INFO  2018-07-07 11:05:51,795 [1    ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'
+INFO  2018-07-07 11:05:51,795 [1    ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15
+INFO  2018-07-07 11:05:51,795 [1    ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15
+INFO  2018-07-07 11:05:52,041 [chdog] Hangfire.Server.ServerWatchdog           - 1 servers were removed due to timeout
+INFO  2018-07-07 11:05:52,461 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/  
+INFO  2018-07-07 11:05:52,461 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/index.html  
+INFO  2018-07-07 11:05:53,045 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /index.html was not modified
+INFO  2018-07-07 11:05:53,111 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 651.3792ms 304 text/html
+INFO  2018-07-07 11:05:53,147 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action Tensee.Banch.Web.Controllers.HomeController.Index (Tensee.Banch.Web.Host)
+INFO  2018-07-07 11:05:53,223 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Tensee.Banch.Web.Controllers.HomeController.Index (Tensee.Banch.Web.Host) - Validation state: Valid
+INFO  2018-07-07 11:05:53,228 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Tensee.Banch.Web.Controllers.HomeController.Index (Tensee.Banch.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 1.9939ms.
+INFO  2018-07-07 11:05:53,246 [9    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-07-07 11:05:53,256 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Tensee.Banch.Web.Controllers.HomeController.Index (Tensee.Banch.Web.Host) in 105.2435ms
+INFO  2018-07-07 11:05:53,264 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 809.6076ms 302 
+INFO  2018-07-07 11:05:53,267 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger  
+INFO  2018-07-07 11:05:53,279 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12.179ms 301 
+INFO  2018-07-07 11:05:53,286 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/  
+INFO  2018-07-07 11:05:53,326 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 39.7456ms 200 text/html
+INFO  2018-07-07 11:05:53,384 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/css/typography.css  
+INFO  2018-07-07 11:05:53,384 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/object-assign-pollyfill.js  
+INFO  2018-07-07 11:05:53,385 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/typography.css was not modified
+INFO  2018-07-07 11:05:53,385 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.4195ms 304 text/css
+INFO  2018-07-07 11:05:53,386 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/object-assign-pollyfill.js was not modified
+INFO  2018-07-07 11:05:53,386 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.6966ms 304 application/javascript
+INFO  2018-07-07 11:05:53,390 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/lodash.min.js  
+INFO  2018-07-07 11:05:53,394 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/lodash.min.js was not modified
+INFO  2018-07-07 11:05:53,394 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.2388ms 304 application/javascript
+INFO  2018-07-07 11:05:53,394 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/css/reset.css  
+INFO  2018-07-07 11:05:53,395 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/css/print.css  
+INFO  2018-07-07 11:05:53,395 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/reset.css was not modified
+INFO  2018-07-07 11:05:53,395 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.2024ms 304 text/css
+INFO  2018-07-07 11:05:53,396 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/print.css was not modified
+INFO  2018-07-07 11:05:53,396 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.1526ms 304 text/css
+INFO  2018-07-07 11:05:53,405 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/jquery-1.8.0.min.js  
+INFO  2018-07-07 11:05:53,406 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery-1.8.0.min.js was not modified
+INFO  2018-07-07 11:05:53,406 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.0291ms 304 application/javascript
+INFO  2018-07-07 11:05:53,407 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/swagger-ui.min.js  
+INFO  2018-07-07 11:05:53,409 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.min.js was not modified
+INFO  2018-07-07 11:05:53,409 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.4791ms 304 application/javascript
+INFO  2018-07-07 11:05:53,409 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/jquery.slideto.min.js  
+INFO  2018-07-07 11:05:53,410 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery.slideto.min.js was not modified
+INFO  2018-07-07 11:05:53,410 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.705ms 304 application/javascript
+INFO  2018-07-07 11:05:53,422 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/jquery.ba-bbq.min.js  
+INFO  2018-07-07 11:05:53,422 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/css/screen.css  
+INFO  2018-07-07 11:05:53,423 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/screen.css was not modified
+INFO  2018-07-07 11:05:53,423 [4    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery.ba-bbq.min.js was not modified
+INFO  2018-07-07 11:05:53,424 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.354ms 304 application/javascript
+INFO  2018-07-07 11:05:53,424 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.2557ms 304 text/css
+INFO  2018-07-07 11:05:53,433 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/highlight.9.1.0.pack.js  
+INFO  2018-07-07 11:05:53,436 [4    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/highlight.9.1.0.pack.js was not modified
+INFO  2018-07-07 11:05:53,436 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.993ms 304 application/javascript
+INFO  2018-07-07 11:05:53,436 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/highlight.9.1.0.pack_extended.js  
+INFO  2018-07-07 11:05:53,437 [4    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/highlight.9.1.0.pack_extended.js was not modified
+INFO  2018-07-07 11:05:53,437 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.2612ms 304 application/javascript
+INFO  2018-07-07 11:05:53,442 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/swagger-oauth.js  
+INFO  2018-07-07 11:05:53,443 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/jquery.wiggle.min.js  
+INFO  2018-07-07 11:05:53,443 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/swagger-oauth.js was not modified
+INFO  2018-07-07 11:05:53,443 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.5375ms 304 application/javascript
+INFO  2018-07-07 11:05:53,444 [3    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery.wiggle.min.js was not modified
+INFO  2018-07-07 11:05:53,444 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.0054ms 304 application/javascript
+INFO  2018-07-07 11:05:53,453 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/marked.js  
+INFO  2018-07-07 11:05:53,456 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/marked.js was not modified
+INFO  2018-07-07 11:05:53,456 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.186ms 304 application/javascript
+INFO  2018-07-07 11:05:53,456 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/jsoneditor.min.js  
+INFO  2018-07-07 11:05:53,457 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jsoneditor.min.js was not modified
+INFO  2018-07-07 11:05:53,457 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.1957ms 304 application/javascript
+INFO  2018-07-07 11:05:53,458 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/images/logo_small.png  
+INFO  2018-07-07 11:05:53,459 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/logo_small.png was not modified
+INFO  2018-07-07 11:05:53,459 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.123ms 304 image/png
+INFO  2018-07-07 11:05:53,460 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/backbone-min.js  
+INFO  2018-07-07 11:05:53,461 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/backbone-min.js was not modified
+INFO  2018-07-07 11:05:53,461 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.2533ms 304 application/javascript
+INFO  2018-07-07 11:05:53,462 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/lib/handlebars-4.0.5.js  
+INFO  2018-07-07 11:05:53,463 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/handlebars-4.0.5.js was not modified
+INFO  2018-07-07 11:05:53,463 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.2955ms 304 application/javascript
+INFO  2018-07-07 11:05:53,796 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/v1/swagger.json  
+INFO  2018-07-07 11:05:54,351 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 555.6761ms 200 application/json
+INFO  2018-07-07 11:06:04,362 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:22742/swagger/images/throbber.gif  
+INFO  2018-07-07 11:06:04,362 [3    ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/throbber.gif was not modified
+INFO  2018-07-07 11:06:04,363 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.0393ms 304 image/gif

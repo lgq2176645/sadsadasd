@@ -108,8 +108,9 @@ namespace Tensee.Banch
         /// 退款
         /// </summary>
         /// <param name="key">商户API key</param>
+        /// <param name="cert_subjectName">商户证书主体名</param>
         /// <returns></returns>
-        public async Task<bool> GetRefund(string key)
+        public async Task<bool> GetRefund(string key, string cert_subjectName)
         {
             var dicProperties = ToDicHelper.GetPropertiesFromObj(this);
             dicProperties.Remove(nameof(timeStamp));
@@ -130,7 +131,7 @@ namespace Tensee.Banch
             store.Open(OpenFlags.ReadOnly);
             foreach (var cert in store.Certificates)
             {
-                if (cert.SubjectName.Name == "SN=100757442, CN=永德县迅捷家电维修部, OU=MMPay, O=Tencent, L=Shenzhen, S=Guangdong, C=CN")
+                if (cert.SubjectName.Name == cert_subjectName)
                 {
                     handler.ClientCertificates.Add(cert);
                 }

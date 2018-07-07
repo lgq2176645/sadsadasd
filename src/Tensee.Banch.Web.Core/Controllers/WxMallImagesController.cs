@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Threading.Tasks;
-using Tensee.Banch.Mobile.Imgs;
 
 namespace Tensee.Banch.Web.Controllers
 {
@@ -35,7 +34,6 @@ namespace Tensee.Banch.Web.Controllers
     public class WxMallImagesController : BanchControllerBase
     {
         private readonly IAppFolders appFolders;
-        private readonly IImagesAppService imagesAppService;
         string webRoot;
         private readonly Dictionary<ImageFormat, string> ImgDic = new Dictionary<ImageFormat, string>()
         {
@@ -46,10 +44,9 @@ namespace Tensee.Banch.Web.Controllers
             {ImageFormat.Icon, ".ico" }
         };
 
-        public WxMallImagesController(IAppFolders appFolders, IImagesAppService images, IHostingEnvironment env)
+        public WxMallImagesController(IAppFolders appFolders, IHostingEnvironment env)
         {
             this.appFolders = appFolders;
-            imagesAppService = images;
             webRoot = env.WebRootPath;
         }
 
