@@ -48,18 +48,11 @@
     <DefineConstants>FEATURE_LDAP;FEATURE_SIGNALR</DefineConstants>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net461|AnyCPU'">
-    <DocumentationFile>..\Tensee.Banch.Web.Host\bin\Debug\netcoreapp2.0\xmls\Tensee.Banch.Application.xml</DocumentationFile>
-    <OutputPath>bin\Debug\net461\</OutputPath>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp2.1|AnyCPU'">
+    <DocumentationFile>..\Tensee.Banch.Web.Host\bin\Debug\netcoreapp2.1\xmls\Tensee.Banch.Application.xml</DocumentationFile>
   </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net461|AnyCPU'">
-    <OutputPath></OutputPath>
-    <DocumentationFile>..\Tensee.Banch.Web.Host\bin\Release\netcoreapp2.0\xmls\Tensee.Banch.Application.xml</DocumentationFile>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp2.0|AnyCPU'">
-    <DocumentationFile>..\Tensee.Banch.Web.Host\bin\Debug\netcoreapp2.0\xmls\Tensee.Banch.Application.xml</DocumentationFile>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netcoreapp2.1|AnyCPU'">
+    <DocumentationFile>..\Tensee.Banch.Web.Host\bin\Release\netcoreapp2.1\xmls\Tensee.Banch.Application.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>
