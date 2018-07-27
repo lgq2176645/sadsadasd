@@ -7,6 +7,7 @@ using Abp.AspNetZeroCore.Web.Authentication.External.Microsoft;
 using Abp.Configuration.Startup;
 using Abp.Modules;
 using Abp.Reflection.Extensions;
+using Abp.Runtime.Caching.Redis;
 using Abp.Threading.BackgroundWorkers;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -42,6 +43,9 @@ namespace Tensee.Banch.Web.Startup
         {
             Configuration.Modules.AbpWebCommon().MultiTenancy.DomainFormat = _appConfiguration["App:ServerRootAddress"] ?? "http://localhost:22742/";
             Configuration.Modules.AspNetZero().LicenseCode = _appConfiguration["AbpZeroLicenseCode"];
+            Configuration.Caching.UseRedis();
+            Configuration.Caching.ConfigureAll(cache => cache.DefaultSlidingExpireTime = System.TimeSpan.FromMinutes(2));
+            Configuration.Caching.Configure("WechatAccessTokenCache", cache => cache.DefaultSlidingExpireTime = System.TimeSpan.FromHours(2));
         }
 
         public override void Initialize()
