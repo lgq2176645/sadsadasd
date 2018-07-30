@@ -29,7 +29,7 @@ namespace Tensee.Banch.Web.Controllers
         private readonly UserManager _userManager;
         private readonly IBinaryObjectManager _binaryObjectManager;
         private readonly IFriendshipManager _friendshipManager;
-        private readonly IRepository<Images> _images;
+        //private readonly IRepository<Images> _images;
         private readonly IRepository<BinaryObject, Guid> _binaryObjectRepository;
       
 
@@ -38,7 +38,7 @@ namespace Tensee.Banch.Web.Controllers
                 IBinaryObjectManager binaryObjectManager,
                 IAppFolders appFolders,
                 IFriendshipManager friendshipManager,
-                IRepository<Images> _images,
+                //IRepository<Images> _images,
                 IRepository<BinaryObject, Guid> _binaryObjectRepository
             ) : base(
                 appFolders
@@ -47,7 +47,7 @@ namespace Tensee.Banch.Web.Controllers
             _userManager = userManager;
             _binaryObjectManager = binaryObjectManager;
             _friendshipManager = friendshipManager;
-            this._images = _images;
+            //this._images = _images;
             this._binaryObjectRepository = _binaryObjectRepository;
         }
 
